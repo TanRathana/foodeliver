@@ -6,24 +6,12 @@ import 'package:fooddelivery/view/cart.dart';
 import 'package:fooddelivery/view/order.dart';
 import 'package:fooddelivery/view/account.dart';
 import '../constant/constant.dart';
-import 'package:pin_entry_text_field/pin_entry_text_field.dart';
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:badges/badges.dart';
+import 'package:page_transition/page_transition.dart';
 
 
-void main() => runApp(MyApp());
 
 /// This Widget is the main application widget.
-class MyApp extends StatelessWidget {
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      home: BottomNavPage(),
-    );
-  }
-}
-
 
 class BottomNavPage extends StatefulWidget {
   BottomNavPage({Key key}) : super(key: key);
@@ -75,8 +63,17 @@ class _BottomNavPageState extends State<BottomNavPage> {
               title: Text('Order')
           ),
           BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              title: Text('Account')
+            title: Text('Account'),
+            icon:Badge(
+              shape: BadgeShape.circle,
+              borderRadius: 100,
+              child: Icon(Icons.person),
+              badgeContent: Text('9',
+              style: TextStyle(color: Colors.white),),
+
+
+            ),
+
           )
         ],
         currentIndex: _currentIndex,

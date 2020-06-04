@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:fooddelivery/constant/constant.dart';
+import 'package:badges/badges.dart';
 
 class AccountPage extends StatefulWidget {
   @override
@@ -6,19 +9,14 @@ class AccountPage extends StatefulWidget {
 }
 
 class _AccountPageState extends State<AccountPage> {
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Center(
-        child: Text(
-            'This is account page.',
-          style: TextStyle(
-              fontFamily: 'Greycliff',
-              fontSize: 30.0,
-              fontWeight: FontWeight.bold
-          ),
-        ),
-        ),
-      );
+    return Scaffold(
+
+    );
   }
 }
+
+
+
